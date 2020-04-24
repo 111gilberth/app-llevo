@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bg"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@id/go_to_con"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="40dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:id="@+id/img_profile"
+                android:src="@drawable/placeholder_img"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/full_name"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:id="@+id/name_textview"
+                android:textColor="@color/primaryTextColor"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryTextColor"
+                android:layout_marginTop="5dp"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="5dp"
+                android:id="@+id/go_change_data_user"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/primaryLightColor"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="25dp"
+                    android:textColor="@color/obscure"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:text="@string/change_data"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="5dp"
+            android:id="@+id/go_to_con"
+            android:visibility="gone"
+            android:layout_marginBottom="-5dp"
+            app:cardBackgroundColor="@color/primaryDarkColor"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="25dp"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="@string/pedidos_str"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

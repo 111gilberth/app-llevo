@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:background="@drawable/boh"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ic_main"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/anim_delivery"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            app:lottie_fileName="delivery.json"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:visibility="gone"
+            />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+           android:orientation="vertical"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/margin_login"
+                android:layout_height="wrap_content">
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="1dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_height="wrap_content">
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/username"
+                        android:hint="@string/full_name"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="textEmailAddress"
+                        android:layout_margin="3dp"
+                        android:textSize="16sp"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="1dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_height="wrap_content">
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/password"
+              android:hint="@string/password_inpt"
+              android:textColor="@color/black"
+              android:textColorHint="@color/black"
+              android:inputType="textPassword"
+              android:layout_margin="3dp"
+              android:textSize="16sp"
+              />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/login_btn"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:src="@drawable/back_midle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/login_btn"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/register_text"
+                android:layout_width="0dp"
+                android:layout_margin="5dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:src="@drawable/back_midle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:text="@string/register_info"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_like_dm"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:src="@drawable/back_midle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:text="@string/loginlike"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/arrowus"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/arrowus"
+                    app:srcCompat="@drawable/ic_action_back_arrow"
+                    android:rotation="180"
+                    />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/social_info"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+</RelativeLayout>

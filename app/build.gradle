@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+    defaultConfig {
+        applicationId "com.prisma.telollevo"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.karumi:dexter:6.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation "com.airbnb.android:lottie:3.0.7"
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.github.mohammadatif:Animatoo:master'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.facebook.android:facebook-android-sdk:4.42.0'
+    implementation 'com.github.AomineD:libraryd:1.0.69'
+
+    implementation 'com.eightbitlab:bottomnavigationbar:0.9.6'
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+    implementation 'com.github.satyan:sugar:1.5'
+    implementation 'com.google.code.gson:gson:2.4'
+    implementation 'com.valdesekamdem.library:md-toast:0.9.0'
+    implementation 'com.labo.kaji:fragmentanimations:0.1.1'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    implementation 'com.hanks.animatecheckbox:library:0.1'
+
+}

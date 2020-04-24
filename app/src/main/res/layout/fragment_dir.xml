@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.DirFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                app:lottie_loop="true"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="locationanim.json"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/dir_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:text="@string/empty_fam"
+                android:textColor="@color/obscure"
+                android:textSize="18sp"
+                android:textAlignment="textStart"
+                android:textStyle="normal"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="25dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:text="@string/info1_direction"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"
+                        android:textAlignment="textStart"
+                        android:textStyle="normal"
+                        />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/obscure"
+                    android:textAlignment="textStart"
+                    android:id="@+id/info1"
+
+                    />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:text="@string/info2_direction"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"
+                        android:textAlignment="textStart"
+                        android:textStyle="normal"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/obscure"
+                        android:textAlignment="textStart"
+                        android:id="@+id/info2"
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:padding="2dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:text="@string/info3_direction"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    android:textAlignment="textStart"
+                    android:textStyle="normal"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/obscure"
+                    android:textAlignment="textStart"
+                    android:id="@+id/info3"
+
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+android:layout_marginStart="5dp"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:text="@string/info4_direction"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    android:textAlignment="textStart"
+                    android:textStyle="normal"
+                    />
+
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:layout_margin="5dp"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:background="@drawable/radio_drawable"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/black"
+                        android:text="@string/home_option" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/radio_drawable"
+                        android:button="@android:color/transparent"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="@string/work_option" />
+
+                </RadioGroup>
+
+
+
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ok_butn"
+                android:layout_width="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/back_midle"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:gravity="center"
+                    android:text="@string/save_dir"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="20sp"
+                    android:layout_margin="20dp"
+                    android:textAlignment="center"
+
+                    android:textStyle="normal"
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>

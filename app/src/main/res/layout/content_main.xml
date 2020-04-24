@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+  <FrameLayout
+      android:layout_width="match_parent"
+  android:layout_above="@id/tablay"
+   android:layout_marginTop="50dp"
+      android:id="@+id/framm"
+      android:layout_height="match_parent">
+
+
+  </FrameLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:id="@+id/loading_small"
+      android:layout_marginBottom="4dp"
+      android:layout_above="@id/carrito_go"
+    android:layout_centerHorizontal="true"
+      android:orientation="vertical"
+      android:layout_height="wrap_content">
+
+
+  <com.airbnb.lottie.LottieAnimationView
+      android:layout_width="120dp"
+      android:layout_height="120dp"
+      android:id="@+id/loading_anim_main"
+      app:lottie_fileName="lading.json"
+      android:layout_gravity="center_horizontal"
+      android:scaleType="centerCrop"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      />
+
+    <TextView
+        android:id="@+id/loading_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/wait_loading"
+        android:textAlignment="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="16sp" />
+
+  </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carrito_go"
+        android:layout_width="match_parent"
+        android:layout_above="@id/tablay"
+        app:cardBackgroundColor="@color/primaryDarkColor"
+        app:cardElevation="10dp"
+        android:layout_height="60dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/quantity_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quantity_example"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/watch_order"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/total_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quantity_example"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+   <com.prisma.telollevo.utils.CustomTabLayout
+       android:layout_width="match_parent"
+     android:id="@+id/tablay"
+       app:tabBackground="@color/primaryColor"
+       app:tabSelectedTextColor="@color/primaryTextColor"
+       app:tabIndicatorColor="@color/primaryTextColor"
+       app:tabMode="scrollable"
+       android:layout_alignParentBottom="true"
+       android:layout_centerHorizontal="true"
+       app:tabMinWidth="85dp"
+       app:tabPadding="5dp"
+       app:tabTextAppearance="@style/text_tab"
+       app:tabTextColor="@color/obscure"
+       android:layout_height="wrap_content">
+
+   </com.prisma.telollevo.utils.CustomTabLayout>
+</RelativeLayout>

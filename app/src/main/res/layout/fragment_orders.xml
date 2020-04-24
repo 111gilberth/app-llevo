@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.OrdersFragment">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:background="@drawable/bg"
+       android:layout_height="match_parent">
+       <ImageView
+           android:layout_width="32dp"
+           android:layout_height="32dp"
+           android:layout_margin="8dp"
+           android:id="@+id/back_buton"
+           android:layout_alignParentTop="true"
+           android:layout_alignParentStart="true"
+           app:srcCompat="@drawable/ic_action_back_arrow"
+           />
+
+       <com.google.android.material.tabs.TabLayout
+           android:layout_width="match_parent"
+           android:id="@+id/tablay"
+           app:tabBackground="@color/primaryTextColor"
+           app:tabSelectedTextColor="@color/primaryColor"
+           app:tabMode="fixed"
+           app:tabTextColor="@color/obscure"
+           app:tabIndicatorColor="@color/primaryColor"
+           app:tabGravity="fill"
+           android:layout_below="@id/back_buton"
+           android:layout_height="wrap_content">
+
+       </com.google.android.material.tabs.TabLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_below="@id/tablay"
+           android:id="@+id/rec_list"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+       </androidx.recyclerview.widget.RecyclerView>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textStyle="bold"
+           android:textColor="@color/primaryTextColor"
+           android:textSize="36sp"
+           android:textAlignment="center"
+           android:text="@string/empty_orders"
+           android:layout_centerHorizontal="true"
+           android:id="@+id/empty_btt"
+           android:gravity="center_horizontal"
+           android:layout_below="@id/tablay"
+           android:visibility="gone"
+           android:layout_marginTop="55dp"
+           />
+
+   </RelativeLayout>
+
+</FrameLayout>

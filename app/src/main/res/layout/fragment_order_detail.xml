@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.OrderDetailFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:padding="8dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/all_info"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:text="@string/order_detail"
+            />
+
+
+        <TextView
+            android:id="@+id/bussi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="Nombre del negocio: Chinaza"
+            android:textAlignment="textStart"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="22sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/primaryTextColor"
+            />
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:id="@+id/list_prd"
+          android:layout_height="140dp">
+
+      </androidx.recyclerview.widget.RecyclerView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/primaryTextColor"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/totaltopay"
+                android:textAlignment="textStart"
+             android:layout_weight="1"
+                android:textColor="@color/primaryTextColor"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                />
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_gravity="center_vertical"
+    android:tint="@color/primaryTextColor"
+    app:srcCompat="@drawable/iconcolon"
+    />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="410000.0"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/primaryTextColor"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:text="@string/direction_ttl"
+            android:textAlignment="textStart"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/direction_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+            android:maxLines="3"
+            android:text="@string/dir_bussines"
+            android:textAlignment="textStart"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/shadowPrimary"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:text="@string/more_info"
+            android:textAlignment="textStart"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+           android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:text="@string/payment_method"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                />
+
+            <TextView
+                android:id="@+id/pay_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="15dp"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@string/credit_option"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:text="@string/pay_form"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    />
+
+                <TextView
+                    android:id="@+id/formaPago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="@string/credit_option"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:text="@string/date_ttl"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                />
+
+            <TextView
+                android:id="@+id/date_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="15dp"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@string/date_example"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:text="@string/order_number"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                />
+
+            <TextView
+                android:id="@+id/num_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="15dp"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="#34"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/shadowPrimary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:text="@string/delivery_info"
+            android:textAlignment="textStart"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="start"
+                android:text="@string/name_delivery"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                />
+
+            <TextView
+                android:id="@+id/delivery_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="15dp"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="Diego Garcia"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back_midle"
+                android:id="@+id/rate_delivery"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="start"
+                    android:text="@string/rate_ttl"
+                    android:textAlignment="textStart"
+                    android:maxLines="1"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/shadowPrimary"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/white_corners"
+    android:id="@+id/button_collapse"
+    android:layout_marginTop="8dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+app:srcCompat="@drawable/close_down"
+        android:layout_gravity="center"
+        android:id="@+id/img_collapse"
+        android:rotation="180"
+        android:layout_margin="10dp"
+        />
+
+
+</LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:text="@string/status_order"
+            android:textAlignment="textStart"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/shadowPrimary"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <com.hanks.library.AnimateCheckBox
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/pending_check"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:animDuration="500"
+                    app:checkedColor="@color/primaryDarkColor"
+                    app:lineColor="#fff"
+                    app:lineWidth="1.2dp"
+                    app:unCheckColor="@color/primaryTextColor" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:id="@+id/anim_check_1"
+                    app:lottie_fileName="data.json"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:text="@string/check_pending"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+
+
+                <com.hanks.library.AnimateCheckBox
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/preparing_check"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:animDuration="500"
+                    app:checkedColor="@color/primaryDarkColor"
+                    app:lineColor="#fff"
+                    app:lineWidth="1.2dp"
+                    app:unCheckColor="@color/primaryTextColor" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:id="@+id/anim_check_2"
+                    app:lottie_fileName="data.json"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:text="@string/check_preparing"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+
+
+                <com.hanks.library.AnimateCheckBox
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/on_road_check"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:animDuration="500"
+                    app:checkedColor="@color/primaryDarkColor"
+                    app:lineColor="#fff"
+                    app:lineWidth="1.2dp"
+                    app:unCheckColor="@color/primaryTextColor" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:id="@+id/anim_check_3"
+                    app:lottie_fileName="data.json"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:text="@string/check_onroad"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+
+
+                <com.hanks.library.AnimateCheckBox
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/delivered_check"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:animDuration="500"
+                    app:checkedColor="@color/primaryDarkColor"
+                    app:lineColor="#fff"
+                    app:lineWidth="1.2dp"
+                    app:unCheckColor="@color/primaryTextColor" />
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:id="@+id/anim_check_4"
+                    app:lottie_fileName="data.json"
+                    />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:text="@string/check_delivered"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+
+
+                <com.hanks.library.AnimateCheckBox
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/done_check"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:animDuration="500"
+                    app:checkedColor="@color/primaryDarkColor"
+                    app:lineColor="#fff"
+                    app:lineWidth="1.2dp"
+                    app:unCheckColor="@color/primaryTextColor" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:id="@+id/anim_check_5"
+                    app:lottie_fileName="data.json"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:text="@string/check_done"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/change_status"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/white_corners"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/order_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/pending_order"
+                android:textAlignment="center"
+                android:maxLines="1"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/close_down"
+                android:layout_gravity="center_vertical"
+                android:rotation="270"
+                android:layout_margin="20dp"
+                android:id="@+id/img_forward_view"
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/loading_anim"
+                app:lottie_fileName="preloading.json"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+</FrameLayout>
